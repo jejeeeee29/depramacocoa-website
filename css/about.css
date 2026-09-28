@@ -1,0 +1,421 @@
+:root{
+  --gold:#A46B0B;
+  --brown:#1C110C;
+  --cream:#F6F2EC;
+}
+
+
+/* ===== ABOUT HERO ===== */
+
+.about-hero{
+    position: relative;
+    height: 360px;
+    overflow: hidden;
+}
+
+.about-hero .hero-bg{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* FULL WIDTH OVERLAY */
+.about-hero .overlay{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(28, 17, 12, 0.831);
+    z-index: 1;
+}
+
+.about-content{
+    position: relative;
+    z-index: 2;
+    max-width: 1280px;
+    margin-left: 56px;
+    padding-top: 92px;
+}
+
+.about-content h1{
+    font-family: "Fraunces", serif;
+    font-size: 54px;
+    line-height: 1.08;
+    color: #FFF;
+
+    max-width: 1100px;   /* cukup lebar */
+    margin-bottom: 18px;
+}
+.about-content .eyebrow{
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:999px;
+    background:rgba(255,255,255,.12);
+
+    color:#D1B583;
+    font:600 11px "DM Sans";
+    letter-spacing:.08em;
+    margin-bottom:20px;
+}
+
+
+.about-content p{
+    font-family:"DM Sans";
+    font-size:18px;
+    line-height:170%;
+    color:rgba(255,255,255,.92);
+    max-width:720px;
+}
+
+/* PIPELINE */
+
+.pipeline{
+  background:#EFE7DB;
+  padding:88px 0;
+}
+
+.pipeline-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.step-card{
+  background:white;
+  padding:24px 18px;
+  border-radius:8px;
+}
+
+.step-card h3{
+  color:#C1723E;
+  font-family:"Fraunces";
+  font-size:28px;
+}
+
+.step-card h4{
+  margin:12px 0 8px;
+  font-family:"Fraunces";
+  color:var(--brown);
+}
+
+.step-card p{
+  font-family:"DM Sans";
+  font-size:14px;
+  line-height:160%;
+  color:#6B5A52;
+}
+
+/* CERT */
+
+.certifications{
+  background:white;
+  padding:88px 0;
+}
+
+.cert-grid{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:42px;
+  flex-wrap:wrap;
+}
+
+.cert-grid img{
+  height:72px;
+  width:auto;
+  object-fit:contain;
+  opacity:.95;
+  transition:.3s;
+}
+
+.cert-grid img:hover{
+  transform:translateY(-4px);
+  opacity:1;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:42px;
+}
+
+.section-title span{
+    font-family:"DM Sans";
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:.08em;
+    color:#C1723E;
+}
+
+.section-title h2{
+    margin-top:10px;
+    font-family:"Fraunces";
+    font-size:40px;
+    line-height:115%;
+    color:#1C110C;
+}
+
+/* ===== FAQ ===== */
+
+.faq{
+  background:#F1E9DF;
+  padding:88px 0;
+}
+
+.faq-grid{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:72px;
+  align-items:start;
+}
+
+.faq-left h2{
+  font-family:"Fraunces",serif;
+  font-size:48px;
+  line-height:110%;
+  color:#1C110C;
+  margin:16px 0;
+}
+
+.faq-left h2 span{
+  color:#A46B0B;
+}
+
+.faq-left p{
+  color:#6B5A52;
+  line-height:170%;
+  margin-bottom:28px;
+}
+
+.faq-line{
+  width:72px;
+  height:2px;
+  background:#C1723E;
+  position:relative;
+}
+
+.faq-line::after{
+  content:"";
+  position:absolute;
+  right:-8px;
+  top:50%;
+  width:6px;
+  height:6px;
+  background:#C1723E;
+  border-radius:50%;
+  transform:translateY(-50%);
+}
+
+/* Accordion */
+
+.faq-right{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.faq-item{
+  background:#FFF;
+  border-radius:18px;
+  overflow:hidden;
+}
+
+.faq-question{
+  width:100%;
+  background:transparent;
+  border:none;
+  cursor:pointer;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:18px 18px;
+  text-align:left;
+}
+
+.faq-question p{
+  margin:0;
+  flex:1;
+
+  font-family:"DM Sans", sans-serif;
+  font-size:18px;
+  font-weight:600;
+  line-height:1.45;
+  color:#A46B0B;
+  text-align:left;
+}
+
+.faq-question span{
+  margin-left:18px;
+  flex-shrink:0;
+
+  color:#A46B0B;    
+  font-size:20px;
+  line-height:1;
+}
+
+.faq-item.active .faq-question span{
+  transform:rotate(180deg);
+}
+
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+  padding:0 28px;
+  color:#6B5A52;
+  line-height:1.65;
+  transition:.35s ease;
+}
+
+.faq-item.active .faq-answer{
+  max-height:160px;
+  padding:0 28px 24px;
+}
+/* ==========================
+   PIPELINE ANIMATION
+========================== */
+
+.step-card{
+    opacity: 0;
+    transform: translateY(28px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease,
+        box-shadow .3s ease;
+}
+
+.step-card.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.step-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 18px 36px rgba(28,17,12,.08);
+}
+
+.step-card h3{
+    transition: color .3s ease;
+}
+
+.step-card:hover h3{
+    color: #A46B0B;
+}
+
+/* ==========================
+   CERTIFICATE ANIMATION
+========================== */
+
+.cert-grid img{
+    height:72px;
+    width:auto;
+    object-fit:contain;
+
+    /* initial state */
+    opacity:0;
+    filter:grayscale(100%);
+    transform:translateY(20px) scale(.95);
+
+    transition:
+      opacity .6s ease,
+      transform .6s ease,
+      filter .45s ease;
+}
+
+.cert-grid img.active{
+    opacity:1;
+    filter:grayscale(0%);
+    transform:translateY(0) scale(1);
+}
+
+/* hover */
+.cert-grid img:hover{
+    transform:translateY(-4px) scale(1.03);
+    filter:grayscale(0%);
+}
+
+/* =====================================
+   ABOUT — MOBILE RESPONSIVE
+===================================== */
+@media (max-width:768px){
+
+  .about-hero{
+    min-height:680px;
+    height:auto;
+    display:flex;
+    align-items:flex-start;
+  }
+
+  .about-content{
+    margin-left:0;
+    padding:96px 20px 48px;
+    max-width:100%;
+  }
+
+  .about-content .eyebrow{
+    margin-bottom:14px;
+  }
+
+  .about-content h1{
+    font-size:44px;
+    line-height:1.08;
+    max-width:340px;
+    margin-bottom:18px;
+  }
+
+  .about-content p{
+    font-size:16px;
+    line-height:1.65;
+    max-width:340px;
+  }
+
+  /* 4 step production */
+  .pipeline{
+    padding:56px 0;
+  }
+
+  .pipeline-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+  .step-card{
+    padding:22px 20px;
+  }
+
+  .section-title h2{
+    font-size:32px;
+    line-height:1.2;
+  }
+
+  /* certificate */
+  .certifications{
+    padding:56px 0;
+  }
+
+  .cert-grid{
+    gap:24px;
+  }
+
+  .cert-grid img{
+    height:54px;
+  }
+
+  /* FAQ */
+  .faq{
+    padding:56px 0;
+  }
+
+  .faq-grid{
+    grid-template-columns:1fr;
+    gap:36px;
+  }
+
+  .faq-left h2{
+    font-size:34px;
+  }
+
+}

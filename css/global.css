@@ -1,0 +1,161 @@
+/* =========================
+   DEPRAMA DESIGN SYSTEM
+========================= */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:wght@700&display=swap');
+
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'DM Sans', sans-serif;
+    background:#F6F2EC;
+    color:#2B1C14;
+    line-height:1.6;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font-family:inherit;
+    border:none;
+    cursor:pointer;
+}
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root{
+
+    /* Brand */
+    --gold:#C58A18;
+    --gold-hover:#D59B29;
+
+    --brown-900:#1B120C;
+    --brown-700:#4B3628;
+
+    --cream:#F6F2EC;
+    --white:#FFFFFF;
+
+    --text:#2B1C14;
+    --text-light:#F3ECE5;
+
+    --border:#E7DDD2;
+
+    /* Typography */
+    --font-heading:'Fraunces', serif;
+    --font-body:'DM Sans', sans-serif;
+
+    /* Layout */
+    --container:1280px;
+    --radius:8px;
+    --radius-lg:12px;
+
+    /* Spacing */
+    --section:96px;
+}
+
+/* =========================
+   REUSABLE
+========================= */
+
+.container{
+    width: 1280px;
+    max-width: calc(100% - 160px);
+    margin: 0 auto;
+}
+
+.section{
+    padding:var(--section) 0;
+}
+
+h1,h2,h3{
+    font-family:var(--font-heading);
+    color:var(--brown-900);
+}
+
+h1{
+    font-size:56px;
+    line-height:110%;
+}
+
+h2{
+    font-size:40px;
+    line-height:120%;
+}
+
+h3{
+    font-size:28px;
+    line-height:130%;
+}
+
+p{
+    font-size:18px;
+    color:#ffff;
+}
+
+.btn-primary{
+    background:var(--gold);
+    color:white;
+    padding:14px 24px;
+    border-radius:var(--radius);
+    font-weight:600;
+    transition:.25s;
+}
+
+.btn-primary:hover{
+    background:var(--gold-hover);
+}
+
+.btn-outline{
+    border:1px solid rgba(255,255,255,.4);
+    color:white;
+    padding:14px 24px;
+    border-radius:var(--radius);
+    font-weight:600;
+}
+
+/* ==========================
+   PAGE TRANSITION
+========================== */
+
+body{
+    opacity:0;
+    animation:pageIn .45s ease forwards;
+}
+
+body.fade-out{
+    animation:pageOut .25s ease forwards;
+}
+
+@keyframes pageIn{
+    from{ opacity:0; }
+    to{ opacity:1; }
+}
+
+@keyframes pageOut{
+    from{ opacity:1; }
+    to{ opacity:0; }
+}
+
+html{
+    scroll-behavior:smooth;
+}
